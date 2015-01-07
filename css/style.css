@@ -1,0 +1,68 @@
+.main_area {
+  margin: auto;
+  margin-top: 80px;
+  width: 500px;
+  border: 1px solid #1a242f;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center; }
+  .main_area h1 {
+    margin: 0;
+    margin-bottom: 30px; }
+
+.submit_area {
+  margin-bottom: 30px; }
+  .submit_area input[type="text"] {
+    padding: 7px 5px;
+    display: block;
+    width: 97%;
+    margin-bottom: 20px;
+    border: 1px solid #C5C5C5; }
+  .submit_area input[type="submit"] {
+    background-color: #20aa73;
+    border: none;
+    box-shadow: 0 5px 0 0 #069059;
+    border-radius: 5px;
+    padding: 10px 50px;
+    color: #fff;
+    position: relative; }
+    .submit_area input[type="submit"]:hover {
+      box-shadow: 0 2px 0 0 #069059;
+      top: 3px; }
+    .submit_area input[type="submit"]:active {
+      box-shadow: 0 0px 0 0;
+      top: 5px; }
+    .submit_area input[type="submit"]:disabled {
+      box-shadow: 0 0px 0 0;
+      top: 5px;
+      background-color: #069059; }
+
+#result {
+  position: relative; }
+
+table {
+  width: 100%;
+  table-layout: fixed; }
+  table tr {
+    border-bottom: 1px solid #798d8f;
+    border-top: 1px solid #798d8f; }
+    table tr:nth-child(2n) th, table tr:nth-child(2n) td {
+      background-color: #bac4c5; }
+  table th {
+    padding: 15px; }
+
+#loading {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.56); }
+  #loading img {
+    margin-top: 140px; }
+
+td span {
+  font-family: "roboto";
+  font-size: 35px;
+  font-weight: 100;
+  padding-right: 4px; }
