@@ -97,7 +97,10 @@ if($code != 200){
         if($code == 200){
             $cont = array_merge($cont,$data["villages"]);
         }
-        $cursor = $data["cursor"];
+        if(array_key_exists("cursor",$data)){
+	        $cursor = $data["cursor"];
+        }
+        
 
     }
 

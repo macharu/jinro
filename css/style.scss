@@ -1,11 +1,24 @@
+body{
+	background-color: #F7F7F7;
+	font-family: 'Quicksand', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", 'メイリオ' , Meiryo , Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color: #4A4A4A;
+}
+
+$small:  "only screen and (max-width:640px)";
+$middle: "only screen and (min-width:641px)";
+
+
+
+
 .main_area{
-	margin: auto;
-	margin-top: 80px;
-	width: 500px;
-	border: 1px solid rgb(26, 36, 47);
-	border-radius: 5px;
-	padding: 20px;
-	text-align: center;
+	
+border: 1px solid #C7C7C7;
+border-radius: 5px;
+padding: 20px;
+text-align: center;
+background: white;
+box-shadow: 0 0 1px 0 #BBB inset;
+
 	h1{
 		margin:0;
 		margin-bottom: 30px;
@@ -50,12 +63,15 @@
 table{
 	width: 100%;
 	table-layout: fixed;
+	thead {
+		border-bottom: 2px solid #E3E7EA;
+	}
 	tr{
-		border-bottom: 1px solid rgb(121, 141, 143);
-		border-top: 1px solid rgb(121, 141, 143);
+		border-bottom: 1px solid #e7eaec;
+		
 		&:nth-child(2n){
 			th,td{
-				background-color: rgb(186, 196, 197);
+				background-color: #f9f9f9;
 			}
 			
 		}
@@ -81,4 +97,52 @@ font-family: "roboto";
 font-size: 35px;
 font-weight: 100;
 padding-right: 4px;
+}
+.attention {
+margin-top: 30px;
+font-size: 14px;
+background-color: rgb(242, 222, 222);
+padding: 17px 3%;
+color: rgb(169, 68, 66);
+font-weight: bold;
+line-height: 170%;
+border-radius: 3px;
+}
+.intro{
+	margin-top: 20px;
+	
+	a{
+		text-decoration: none;
+	} 
+	i{
+		font-size: 20px;
+		padding-right: 6px;
+	}
+}
+
+.sample_url {
+font-size: 12px;
+}
+
+
+@media #{$small} {
+    .main_area{
+		margin: 2%;
+	}
+	td span {
+		
+		font-size: 15px;
+		
+		font-weight: 900;
+	}
+}
+
+@media #{$middle} {
+    .main_area{
+		margin: auto;
+		margin-top: 80px;
+		margin-bottom: 80px;
+		width: 500px;
+
+	}
 }

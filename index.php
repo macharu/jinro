@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>人狼</title>
+        <title>人狼オンラインX勝率計算ツール</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel='stylesheet' id='google_font-css'  href='http://fonts.googleapis.com/css?family=Roboto%3A500%2C900%2C100%2C300%2C700%2C400&#038;ver=4.1' type='text/css' media='all' />
+        <link href='//fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -30,9 +32,14 @@
         	<div class="submit_area">
         		<form method="post">
 				    <input id="value" type="text" name="url" placeholder="人狼オンラインXのユーザーページのURLを入力してください">
+				    <p class="sample_url">サンプルURL：http://www.werewolfonline.net/user/5834097552261120</p>
 				    <input id="button" type="submit" value="勝率を計算">
 				    
 				</form>
+                <div class="attention">
+                    プレイ回数が多いと集計に時間がかかります</br>
+                    通信環境にもよりますが、だいたい300戦で約30秒程です
+                </div>
         	</div>	
         	
 			
@@ -41,6 +48,14 @@
                     <img src="img/loading.gif" height="55" width="54" alt="">
                 </span>
 			    	<table>
+                        <thead>
+                            <tr>
+                                <th>役職</th>
+                                <th>プレイ数</th>
+                                <th>勝利数</th>
+                                <th>勝率</th>
+                            </tr>
+                        </thead>
                         <tr id="villege">
                             <th>村人</th>
                             <td class="game"><span>0</span>戦</td>
@@ -87,6 +102,10 @@
 			    	</table>
 			    	
 			 </div>
+             <div class="intro">
+                 <i class="fa fa-twitter-square"></i><a href="https://twitter.com/sonyatan_jinro" target="_blank">sonyatan_jinro</a>
+             </div>
+             
         	
         </div>
         
@@ -125,7 +144,7 @@
             	})
             	.always(function(data) {
             		console.log("complete");
-                    
+                    console.log(data);
                     data = JSON.parse( data );
                     if(data != "error"){
                         
